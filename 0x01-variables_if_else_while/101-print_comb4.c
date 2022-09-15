@@ -10,30 +10,30 @@
 int main(void)
 
 {
-	int d, p, q;
 
-	for (d = '0'; d < '9'; d++)
+	int d, p, q, c;
+
+
+	for (d = 0; d < 1000; d++)
 	{
-		for (p = d + 1; p <= '9'; p++)
+		p = d / 100;
+		q = (d / 10) % 10;
+		c = d % 10;
+
+		if (p < q && q < c)
 		{
-			for (q = p + 1; q <= '9'; q++)
+			putchar(p + '0');
+			putchar(q + '0');
+			putchar(c + '0');
+
+			if (d < 700)
 			{
-				if ((p != d) != q)
-				{
-					putchar(d);
-					putchar(p);
-					putchar(p);
+				putchar(44);
+				putchar(32);
 
-					if (d == '7' && p == '8')
-						continue;
-
-					putchar(',');
-					putchar(' ');
-				}
 			}
 		}
 	}
-
 	putchar('\n');
 
 	return (0);
