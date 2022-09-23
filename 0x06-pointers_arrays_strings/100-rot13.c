@@ -7,15 +7,20 @@
 char *rot13(char *s)
 
 {
-	int a;
-	char ab[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
-	char dc[] = "nopqrstuvwxyzabcdefghijklm";
+	int i, j;
 
-	for (a = 0; s[a] != '\0'; a++)
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+	for (i = 0; *(s + i); i++)
 	{
-		if ((s[a] > 64 && s[a] < 91) || (s[a] > 96 && s[a] < 123))
+		for (j = 0; j < 52; j++)
 		{
-			s[a] = (s[a] - 65 > 25) ? dc[s[a] - 97] : ab[s[a] - 65];
+			if (a[j] == *(s + i))
+			{
+				*(s + i) = b[j];
+				break;
+			}
 		}
 	}
 	return (s);
