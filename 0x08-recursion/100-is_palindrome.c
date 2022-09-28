@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *is_palindrome - function to calculate the length of the string
+ *_strlen_recursion - function to calculate the length of the string
  *@s: the input string to calculate length
  *Return: the length of string
  */
