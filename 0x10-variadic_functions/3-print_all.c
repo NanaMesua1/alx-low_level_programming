@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 {
 	int i;
 	int cap;
-	char *string;
+	char *s1;
 	va_list d_list;
 
 	va_start(d_list, format);
@@ -24,25 +24,21 @@ void print_all(const char * const format, ...)
 				printf("%c", va_arg(d_list, int));
 				cap = 0;
 				break;
-
 			case 'i':
 				printf("%i", va_arg(d_list, int));
 				cap = 0;
 				break;
-
 			case 'f':
 				printf("%f", va_arg(d_list, double));
 				cap = 0;
 				break;
-
 			case 's':
-				string = va_arg(d_list, char*);
-				if (string == NULL)
-					string = "(nil)";
-				printf("%s", string);
+				s1 = va_arg(d_list, char*);
+				if (s1 == NULL)
+					s1 = "(nil)";
+				printf("%s", s1);
 				cap = 0;
 				break;
-
 			default:
 				cap = 1;
 				break;
