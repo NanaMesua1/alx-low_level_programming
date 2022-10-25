@@ -3,6 +3,7 @@
 /**
  *print_listint - A function that prints all the elements in the list
  *@h: A pointer to listint structure
+ *Return: ALl the elements in the list
  */
 size_t print_listint(const listint_t *h)
 
