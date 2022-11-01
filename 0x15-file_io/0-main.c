@@ -4,8 +4,7 @@
 
 /**
  * main - check the code for Holberton School students.
- * @ac: ...
- * @av: ...
+ *
  * Return: Always 0.
  */
 int main(int ac, char **av)

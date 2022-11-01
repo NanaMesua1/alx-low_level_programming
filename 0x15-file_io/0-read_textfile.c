@@ -4,6 +4,12 @@
  */
 #include "main.h"
 #include <stdlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/uio.h>
+#include <unistd.h>
+#include <fcntl.h>
+
 
 /**
  * read_textfile - Reads a text file and prints it to POSIX stdout.
