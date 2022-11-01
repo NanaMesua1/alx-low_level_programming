@@ -4,11 +4,6 @@
  */
 #include "main.h"
 #include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <sys/uio.h>
-#include <unistd.h>
-#include <fcntl.h>
 
 
 /**
